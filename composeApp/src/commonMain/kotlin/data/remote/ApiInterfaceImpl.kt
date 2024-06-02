@@ -2,18 +2,18 @@ package data.remote
 
 import data.model.Photo
 import data.remote.EndPoints.SERVICE_FETCH_API
-import data.remote.HttpClientProvider.client
+import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import io.ktor.http.encodedPath
 
-class ApiInterfaceImp : ApiInterface {
+class ApiInterfaceImpl(private val httpClient: HttpClient) : ApiInterface {
     override suspend fun loadPhotos(
         pageNumber: Int,
         pageSize: Int,
         orderBy: String,
     ): List<Photo> {
-        return client.get {
+        return httpClient.get {
             url {
                 encodedPath = SERVICE_FETCH_API
                 parameters.append("page", pageNumber.toString())

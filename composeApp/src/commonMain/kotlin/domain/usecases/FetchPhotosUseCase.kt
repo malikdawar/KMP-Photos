@@ -1,7 +1,6 @@
 package domain.usecases
 
 import data.DataState
-import data.repository.PhotosRepository
 import data.repository.PhotosRepositoryImpl
 import domain.model.PhotoModel
 import domain.model.toPhotoModel

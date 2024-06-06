@@ -89,7 +89,6 @@ kotlin {
             implementation(libs.ktor.client.json)
             implementation(libs.ktor.client.logging)
             implementation(libs.ktor.client.serialization)
-            implementation(libs.ktor.client.cio)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
             // KOIN
@@ -100,7 +99,7 @@ kotlin {
             implementation(compose.desktop.currentOs)
         }
         iosMain.dependencies {
-            //KTOR
+            // KTOR
             implementation(libs.ktor.client.darwin)
             implementation(libs.ktor.ktor.client.ios)
         }

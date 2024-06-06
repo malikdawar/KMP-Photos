@@ -32,7 +32,7 @@ import utils.cornerRadius
 @Composable
 internal fun ImageList(
     photos: List<PhotoModel>,
-    viewModel: HomeViewModel = HomeViewModel(),
+    viewModel: HomeViewModel,
     onclick: (photoModel: PhotoModel) -> Unit,
 ) {
     val gridState = rememberLazyGridState()

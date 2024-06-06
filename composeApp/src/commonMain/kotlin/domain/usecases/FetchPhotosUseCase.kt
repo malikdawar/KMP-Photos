@@ -14,10 +14,7 @@ import utils.AppConstant.PAGE_OFFSET
  * A use-case to load the photos from API.
  * @author Malik Dawar
  */
-class FetchPhotosUseCase {
-    // TODO use it using Koin
-    private val repository: PhotosRepository = PhotosRepositoryImpl()
-
+class FetchPhotosUseCase(private val repository: PhotosRepositoryImpl) {
     suspend operator fun invoke(
         pageNumber: Int = 1,
         pageSize: Int = PAGE_OFFSET,

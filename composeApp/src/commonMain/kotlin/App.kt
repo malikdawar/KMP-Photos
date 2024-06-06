@@ -3,6 +3,8 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import di.initKoin
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import moe.tlaster.precompose.PreComposeApp
 import moe.tlaster.precompose.navigation.BackHandler
 import moe.tlaster.precompose.navigation.Navigator
@@ -14,9 +16,10 @@ import ui.AppViewModel
 import ui.component.AppBarWithArrow
 import utils.AppString
 
+@OptIn(ExperimentalCoroutinesApi::class)
 @Composable
 internal fun App() {
-    // initKoin()
+    initKoin()
     PreComposeApp {
         val navigator = rememberNavigator()
         val isAppBarVisible = remember { mutableStateOf(true) }

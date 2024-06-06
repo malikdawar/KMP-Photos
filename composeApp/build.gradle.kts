@@ -93,14 +93,14 @@ kotlin {
             implementation(libs.ktor.serialization.kotlinx.json)
             // KOIN
             implementation(libs.koin.core)
+            implementation(libs.koin.compose)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
         }
         iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
             // KTOR
-            implementation(libs.ktor.ktor.client.ios)
+            implementation(libs.ktor.client.darwin)
             implementation(libs.ktor.ktor.client.ios)
         }
     }

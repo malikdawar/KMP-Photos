@@ -10,9 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
-class HomeViewModel : ViewModel() {
-    private val fetchPhotosUseCase = FetchPhotosUseCase()
-
+class HomeViewModel(private val fetchPhotosUseCase: FetchPhotosUseCase) : ViewModel() {
     private var pageNumber = 1
     private val _homeUiStateFlow = MutableStateFlow<HomeUiState>(LoadingState)
     val homeUiState: StateFlow<HomeUiState> get() = _homeUiStateFlow

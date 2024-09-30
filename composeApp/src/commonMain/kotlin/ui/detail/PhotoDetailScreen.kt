@@ -203,7 +203,7 @@ fun UiDetail(data: PhotoModel) {
                     overflow = TextOverflow.Ellipsis,
                 )
                 Text(
-                    text = "$PHOTOS${data.photographerFollowers}",
+                    text = "$PHOTOS${data.photographerPhotos}",
                     color = Color.Gray,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Normal,
